@@ -44,7 +44,7 @@ if (isset($_POST["submit"])){
         //Execute the query
         $result = $db->query($query);
         if (!$result) {
-            die("Could not query the database: <br/>" . $db->error . '<br>Query' . $query);
+            ("Could not query the database: <br/>" . $db->error . '<br>Query' . $query);
         } else {
             $db->close();
             header('Location: ../bookorama/view_customer.php');
