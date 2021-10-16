@@ -38,7 +38,7 @@ if(isset($_POST["submit"])){
             if($result->num_rows > 0){
                 $_SESSION['username'] = $email;
                 header('Location: ../bookorama/view_customer.php');
-                exit;
+                
             }else{
                 echo '<span class="error">Combination of username and password are not correct.</span>';
             }
