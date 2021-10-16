@@ -50,12 +50,12 @@
                                 <a href="delete_customer.php?id='.$row
                                 ->ID.'" class="btn btn-danger btn-sm">Delete</a>
                                 </td>';
-                        echo '</tr>';
+                        return '</tr>';
                         $i++;
                     }
-                    echo '<table>';
-                    echo '<br>';
-                    echo 'Total Rows = '.$result->num_rows;
+                    return '<table>';
+                    return '<br>';
+                    return 'Total Rows = '.$result->num_rows;
                     $result->free();
                     $db->close();
                 ?>
