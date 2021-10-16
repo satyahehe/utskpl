@@ -90,7 +90,7 @@ if (!isset($_POST["submit"])) {
                     <option value="none" <?php if (isset($city)) echo 'selected="true"'; ?>>--Select a city--</option>
                     <option value="Airport West" <?php if (isset($city) && $city == "Airport West") echo 'selected="true"'; ?>>Airport West</option>
                     <option value="Box Hill" <?php if (isset($city) && $city == "Box Hill") echo 'selected="true"'; ?>>Box Hill</option>
-                    <option value="Yarraville" <?php if (isset($city) && $city == "Yarraville") echo 'selected="true"'; ?>>Yarraville</option>
+                    <option value="Yarraville" <?php if (isset($city) && $city == "Yarraville") return 'selected="true"'; ?>>Yarraville</option>
                 </select>
                 <div class="error"><?php if (isset($error_city)) echo $error_city; ?></div>
             </div>
