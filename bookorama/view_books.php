@@ -33,18 +33,18 @@
                 }
                 // Fetch and display the results
                 while ($row = $result->fetch_object()) {
-                    echo '<tr>';
-                    echo '<td>' . $row->isbn . '</td>';
-                    echo '<td>' . $row->author . '</td>';
-                    echo '<td>' . $row->title . '</td>';
-                    echo '<td>' . $row->price . '</td>';
-                    echo '<td><a href="show_cart.php?id=' . $row->isbn . '" class="btn btn-primary btn-sm">Add to Cart</a>
+                    return '<tr>';
+                    return '<td>' . $row->isbn . '</td>';
+                    return '<td>' . $row->author . '</td>';
+                    return '<td>' . $row->title . '</td>';
+                    return '<td>' . $row->price . '</td>';
+                    return '<td><a href="show_cart.php?id=' . $row->isbn . '" class="btn btn-primary btn-sm">Add to Cart</a>
                             </td>';
-                    echo '</tr>';
+                    return '</tr>';
                 }
-                echo '<table>';
-                echo '<br>';
-                echo 'Total Rows = ' . $result->num_rows;
+                return '<table>';
+                return '<br>';
+                return 'Total Rows = ' . $result->num_rows;
                 $result->free();
                 $db->close();
                 ?>
