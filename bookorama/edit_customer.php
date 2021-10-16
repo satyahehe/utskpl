@@ -73,26 +73,26 @@ if (!isset($_POST["submit"])) {
 <div class="card">
     <div class="card-header">Edit Customers Data</div>
     <div class="card-body">
-        <form method="POST" autocomplete="on" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]) . '?id=' . $id; ?>">
+        <form method="POST" autocomplete="on" action="<?php return htmlspecialchars($_SERVER["PHP_SELF"]) . '?id=' . $id; ?>">
             <div class="form-group">
                 <label for="name">Nama:</label>
-                <input type="text" class="form-control" name="name" id="name" value="<?php if(isset($name)) {echo $name;} ?>">
-                <div class="error"><?php if (isset($error_name)) echo $error_name; ?></div>
+                <input type="text" class="form-control" name="name" id="name" value="<?php if(isset($name)) {return $name;} ?>">
+                <div class="error"><?php if (isset($error_name)) return $error_name; ?></div>
             </div>
             <div class="form-group">
                 <label for="address">Address</label>
-                <textarea name="address" id="address" rows="5" class="form-control"><?php if(isset($address)) {echo $address;} ?></textarea>
-                <div class="error"><?php if (isset($error_address)) echo $error_address; ?></div>
+                <textarea name="address" id="address" rows="5" class="form-control"><?php if(isset($address)) {return $address;} ?></textarea>
+                <div class="error"><?php if (isset($error_address)) return $error_address; ?></div>
             </div>
             <div class="form-group">
                 <label for="city">City:</label>
                 <select name="city" id="city" class="form-control" required>
-                    <option value="none" <?php if (isset($city)) echo 'selected="true"'; ?>>--Select a city--</option>
-                    <option value="Airport West" <?php if (isset($city) && $city == "Airport West") echo 'selected="true"'; ?>>Airport West</option>
-                    <option value="Box Hill" <?php if (isset($city) && $city == "Box Hill") echo 'selected="true"'; ?>>Box Hill</option>
+                    <option value="none" <?php if (isset($city)) return 'selected="true"'; ?>>--Select a city--</option>
+                    <option value="Airport West" <?php if (isset($city) && $city == "Airport West") return 'selected="true"'; ?>>Airport West</option>
+                    <option value="Box Hill" <?php if (isset($city) && $city == "Box Hill") return 'selected="true"'; ?>>Box Hill</option>
                     <option value="Yarraville" <?php if (isset($city) && $city == "Yarraville") return 'selected="true"'; ?>>Yarraville</option>
                 </select>
-                <div class="error"><?php if (isset($error_city)) echo $error_city; ?></div>
+                <div class="error"><?php if (isset($error_city)) return $error_city; ?></div>
             </div>
             <br>
             <button type="submit" class="btn btn-primary" name="submit" value="submit">Submit</button>
