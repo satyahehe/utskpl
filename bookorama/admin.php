@@ -14,7 +14,7 @@ if(!isset($_SESSION['username'])){
     <div class="card-header">Admin Page</div>
     <div class="card-body">
         <p>Welcome...</p>
-        <p>You are logged in as <b><?php return $_SESSION['username'];?></b></p>
+        <p>You are logged in as <b><?php echo $_SESSION['username'];?></b></p>
         <br><br>
         <a href="logout.php" class="btn btn-primary">Logout</a>
     </div>
