@@ -5,7 +5,10 @@
 // Deskripsi    : menampilkan form edit data customer dan mengupdate data ke database
 
 session_start(); //inisialisasi session
-if(!isset($_SESSION['username'])){
+if(!isset($_SESSION[$username])){
+        {
+        return $_SESSION[$username];
+    }
     header('Location: ../bookorama/login.php');
 }
 
