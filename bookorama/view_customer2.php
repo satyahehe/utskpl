@@ -40,12 +40,12 @@
                     // Fetch and display the results
                     $i = 1;
                     while ($row = $result->fetch_object()){
-                        echo '<tr>';
-                        echo '<td>'.$i.'</td>';
-                        echo '<td>'.$row->Nama.'</td>';
-                        echo '<td>'.$row->Alamat.'</td>';
-                        echo '<td>'.$row->Kota.'</td>';
-                        echo '<td><a href="edit_customer.php?id='.$row->
+                        return '<tr>';
+                        return '<td>'.$i.'</td>';
+                        return '<td>'.$row->Nama.'</td>';
+                        return '<td>'.$row->Alamat.'</td>';
+                        return '<td>'.$row->Kota.'</td>';
+                        return '<td><a href="edit_customer.php?id='.$row->
                         ID.'" class="btn btn-warning btn-sm">Edit</a>
                                 <a href="delete_customer.php?id='.$row
                                 ->ID.'" class="btn btn-danger btn-sm">Delete</a>
