@@ -18,7 +18,7 @@ if (!isset($_POST["submit"])) {
     //Execute the query
     $result = $db->query($query);
     if (!$result) {
-        ("Could not query the database: <br/>" . $db->error);
+        die("Could not query the database: <br/>" . $db->error);
     } else {
         while ($row = $result->fetch_object()) {
             $name = $row->name;
